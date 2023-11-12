@@ -25,11 +25,11 @@ is_whatever = True # is_whatever is a boolean
 print(x)
 
 # how to print a string and a variable
-print("My name is " + name)
-print("My name is", name)
-print("My name is %s" % name)
+print("My name is " + name) # this will print "My name is John"
+print("My name is", name) # this will print "My name is John"
+print("My name is %s" % name) # this will print "My name is John"
 # concatenate multiple strings using %
-print("Hello %s %s" % ("World", name))
+print("Hello %s %s" % ("World", name)) # this will print "Hello World John"
 
 
 ##############################################
@@ -37,10 +37,10 @@ print("Hello %s %s" % ("World", name))
 ##############################################
 
 # strings in new lines
-print("Hello\nWorld")
+print("Hello\nWorld") # this will print "Hello" and "World" in two lines
 
 # Escape characters
-print("Hello \"World\"")
+print("Hello \"World\"") # this will print "Hello "World""
 
 # lowercase
 print("Hello World".lower()) # this will print "hello world"
@@ -84,7 +84,7 @@ print("Hello World".replace("H", "J")) # this will print "Jello World"
 ##############################################
 
 # how to print a number
-print(5)
+print(5) # this will print "5"
 
 # sum
 print(5 + 5) # this will print "10"
@@ -106,13 +106,13 @@ print(5 * 5 + 5) # this will print "30"
 print(5 * (5 + 5)) # this will print "50"
 
 # how to convert a number to a string
-print(str(5))
+print(str(5)) # this will print "5"
 
 # how to convert a number to a float
-print(float(5))
+print(float(5)) # this will print "5.0"
 
 # how to convert a number to an integer
-print(int(5.5))
+print(int(5.5)) # this will print "5"
 
 # how to check if a number is an integer
 print(type(5)) # this will print "<class 'int'>"
@@ -166,85 +166,158 @@ print("Hello %s!" % name)
 countries = ["USA", "Canada", "Mexico", "Brazil", "Peru", "Chile"]
 
 # print all items in a list
-print(countries)
+print(countries) # this will print "['USA', 'Canada', 'Mexico', 'Brazil', 'Peru', 'Chile']"
 
 # print the first item in a list
-print(countries[0])
+print(countries[0]) # this will print "USA"
 
 # print the last item in a list
-print(countries[-1])
+print(countries[-1]) # this will print "Chile"
 
 # print the first 3 items in a list
-print(countries[0:3])
+print(countries[0:3]) # this will print "['USA', 'Canada', 'Mexico']"
 
 # print the last 3 items in a list
-print(countries[-3:])
+print(countries[-3:]) # this will print "['Brazil', 'Peru', 'Chile']"
 
 # print the length of a list
-print(len(countries))
+print(len(countries)) # this will print "6"
 
 # add an item to the end of a list
 countries.append("Argentina")
+print(countries) # this will print "['USA', 'Canada', 'Mexico', 'Brazil', 'Peru', 'Chile', 'Argentina']"    
 
 # add an item to a specific index
 countries.insert(1, "Colombia")
+print(countries) # this will print "['USA', 'Colombia', 'Canada', 'Mexico', 'Brazil', 'Peru', 'Chile', 'Argentina']"
 
 # remove an item from a list
 countries.remove("Brazil")
+print(countries) # this will print "['USA', 'Colombia', 'Canada', 'Mexico', 'Peru', 'Chile', 'Argentina']"
 
 # remove the last item from a list
 countries.pop()
+print(countries) # this will print "['USA', 'Colombia', 'Canada', 'Mexico', 'Peru', 'Chile']"
 
 # remove an item from a specific index
 countries.pop(1)
+print(countries) # this will print "['USA', 'Canada', 'Mexico', 'Peru', 'Chile']"
 
 # clear a list
 countries.clear()
+print(countries) # this will print "[]"
 
 # copy a list
 countries = ["USA", "Canada", "Mexico", "Brazil", "Peru", "Chile"]
 countries_copy = countries.copy()
+print(countries_copy) # this will print "['USA', 'Canada', 'Mexico', 'Brazil', 'Peru', 'Chile']"
 
 # count the number of times an item appears in a list
-print(countries.count("USA"))
+print(countries.count("USA")) # this will print "1"
 
 # sort a list
 countries.sort()
+print(countries) # this will print "['Brazil', 'Canada', 'Chile', 'Mexico', 'Peru', 'USA']"
 
 # reverse a list
 countries.reverse()
+print(countries) # this will print "['USA', 'Peru', 'Mexico', 'Chile', 'Canada', 'Brazil']"
 
 # join a list
 countries = ["USA", "Canada", "Mexico", "Brazil", "Peru", "Chile"]
 countries_string = ", ".join(countries)
-print(countries_string)
+print(countries_string) # this will print "USA, Canada, Mexico, Brazil, Peru, Chile"
 
 # convert a string to a list
 countries = countries_string.split(", ")
-print(countries)
+print(countries) # this will print "['USA', 'Canada', 'Mexico', 'Brazil', 'Peru', 'Chile']"
 
 # merge two lists
 countries = ["USA", "Canada", "Mexico", "Brazil", "Peru", "Chile"]
 countries2 = ["Argentina", "Colombia"]
 countries.extend(countries2)
-print(countries)
+print(countries) # this will print "['USA', 'Canada', 'Mexico', 'Brazil', 'Peru', 'Chile', 'Argentina', 'Colombia']"
 
 # count the number of items in a list
-print(len(countries))
+print(len(countries)) # this will print "8"
 
 # counf the number of times an item appears in a list
-print(countries.count("USA"))
+print(countries.count("USA")) # this will print "1"
+
+# check if a item exists in a list
+countries = ["USA", "Canada", "Mexico", "Brazil", "Peru", "Chile"]
+if "USA" in countries:
+    print("USA is in the list")
 
 # list comprehension
 numbers = [1, 2, 3, 4, 5]
 squares = [x * x for x in numbers]
-print(squares)
+print(squares) # this will print "[1, 4, 9, 16, 25]"
 
 # 2D list
 numbers = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 print(numbers[0][0]) # this will print "1"
 print(numbers[1][1]) # this will print "5"
 print(numbers[2][2]) # this will print "9"
+
+# how to create a list with repeated values
+numbers = [0] * 5
+print(numbers) # this will print "[0, 0, 0, 0, 0]"
+
+# how to concatenate two lists
+numbers = [1, 2, 3]
+numbers2 = [4, 5, 6]
+numbers3 = numbers + numbers2
+print(numbers3) # this will print "[1, 2, 3, 4, 5, 6]"
+
+# how to step through a list
+numbers = [1, 2, 3, 4, 5, 6]
+print(numbers[::2]) # this will print "[1, 3, 5]"
+print(numbers[::-1]) # this will print "[6, 5, 4, 3, 2, 1]"
+print(numbers[1::2]) # this will print "[2, 4, 6]"
+print(numbers[1::-1]) # this will print "[2, 1]"
+print(numbers[:1:-1]) # this will print "[6, 5, 4, 3]"
+print(numbers[2::-1]) # this will print "[3, 2, 1]"
+print(numbers[:2:-1]) # this will print "[6, 5, 4]"
+print(numbers[3::-1]) # this will print "[4, 3, 2, 1]"
+print(numbers[:3:-1]) # this will print "[6, 5]"
+print(numbers[4::-1]) # this will print "[5, 4, 3, 2, 1]"
+print(numbers[:4:-1]) # this will print "[6]"
+
+# multiply each item in a list by a number
+numbers = [1, 2, 3, 4, 5, 6]
+numbers2 = [x * 2 for x in numbers]
+print(numbers2) # this will print "[2, 4, 6, 8, 10, 12]"
+
+# filter a list
+numbers = [1, 2, 3, 4, 5, 6]
+numbers2 = [x for x in numbers if x > 3]
+print(numbers2) # this will print "[4, 5, 6]"
+
+# filter a list with a function
+def isEven(x):
+    return x % 2 == 0
+
+numbers = [1, 2, 3, 4, 5, 6]
+numbers2 = [x for x in numbers if isEven(x)]
+print(numbers2) # this will print "[2, 4, 6]"
+numbers2 = [x for x in numbers if not isEven(x)]
+print(numbers2) # this will print "[1, 3, 5]"
+numbers2 = [x for x in numbers if x % 2 == 0]
+print(numbers2) # this will print "[2, 4, 6]"
+numbers2 = [x for x in numbers if x % 2 != 0]
+print(numbers2) # this will print "[1, 3, 5]"
+
+# filter a list with a function and a lambda function
+numbers = [1, 2, 3, 4, 5, 6]
+numbers2 = list(filter(lambda x: x % 2 == 0, numbers))
+print(numbers2) # this will print "[2, 4, 6]"
+numbers2 = list(filter(lambda x: x % 2 != 0, numbers))
+print(numbers2) # this will print "[1, 3, 5]"
+numbers2 = list(filter(isEven, numbers))
+print(numbers2) # this will print "[2, 4, 6]"
+numbers2 = list(filter(lambda x: not isEven(x), numbers))
+print(numbers2) # this will print "[1, 3, 5]"
 
 ##############################################
 ## Tuple
@@ -258,34 +331,55 @@ print(numbers[2][2]) # this will print "9"
 countries = ("USA", "Canada", "Mexico", "Brazil", "Peru", "Chile")
 
 # print all items in a tuple
-print(countries)
+print(countries) # this will print "('USA', 'Canada', 'Mexico', 'Brazil', 'Peru', 'Chile')"
 
 # print the first item in a tuple
-print(countries[0])
+print(countries[0]) # this will print "USA"
 
 # print the last item in a tuple
-print(countries[-1])
+print(countries[-1]) # this will print "Chile"
 
 # print the first 3 items in a tuple
-print(countries[0:3])
+print(countries[0:3]) # this will print "('USA', 'Canada', 'Mexico')"
 
 # print the last 3 items in a tuple
-print(countries[-3:])
+print(countries[-3:]) # this will print "('Brazil', 'Peru', 'Chile')"
 
 # print the length of a tuple
-print(len(countries))
+print(len(countries)) # this will print "6"
 
 # count the number of times an item appears in a tuple
-print(countries.count("USA"))
+print(countries.count("USA")) # this will print "1"
 
 # convert a tuple to a list
 countries = list(countries)
-print(countries)
+print(countries) # this will print "['USA', 'Canada', 'Mexico', 'Brazil', 'Peru', 'Chile']"
 
 # convert a list to a tuple
 countries = tuple(countries)
-print(countries)
+print(countries) # this will print "('USA', 'Canada', 'Mexico', 'Brazil', 'Peru', 'Chile')"
 
+# unpack a tuple
+my_collection = "Mary", 35, "New York"
+name, age, city = my_collection
+print(name) # this will print "Mary"
+print(age) # this will print "35"
+print(city) # this will print "New York"
+
+# unpack a tuple with an arbitrary number of items
+my_collection = (0,1,2,3,4,5)
+a, *b, c = my_collection
+print(a) # this will print "0"
+print(b) # this will print "[1, 2, 3, 4]"
+print(c) # this will print "5"
+
+# Alternative way to declare a tuple
+countries = "USA", "Canada", "Mexico", "Brazil", "Peru", "Chile"
+print(countries) # this will print "('USA', 'Canada', 'Mexico', 'Brazil', 'Peru', 'Chile')"
+
+# Alternative way to declare a tuple with one item
+countries = ("USA",)
+print(countries) # this will print "('USA',)"
 
 ##############################################
 ## Dictionary
@@ -304,33 +398,58 @@ countries = {
 }
 
 # print all items in a dictionary
-print(countries)
+print(countries) # this will print "{'USA': 'Washington DC', 'Canada': 'Ottawa', 'Mexico': 'Mexico City', 'Brazil': 'Brasilia', 'Peru': 'Lima', 'Chile': 'Santiago'}"
 
 # print the value of a key
-print(countries["USA"])
-print(countries.get("USA"))
+print(countries["USA"]) # this will print "Washington DC"
+print(countries.get("USA")) # this will print "Washington DC"
 print(countries.get("Bolivia", "Not Found")) # if the key does not exist, return "Not Found"
 
 # add a key-value pair to a dictionary
 countries["Argentina"] = "Buenos Aires"
+print(countries) # this will print "{'USA': 'Washington DC', 'Canada': 'Ottawa', 'Mexico': 'Mexico City', 'Brazil': 'Brasilia', 'Peru': 'Lima', 'Chile': 'Santiago', 'Argentina': 'Buenos Aires'}"
 
 # remove a key-value pair from a dictionary
 del countries["Brazil"]
+print(countries) # this will print "{'USA': 'Washington DC', 'Canada': 'Ottawa', 'Mexico': 'Mexico City', 'Peru': 'Lima', 'Chile': 'Santiago', 'Argentina': 'Buenos Aires'}"
+
+# remove the last key-value pair from a dictionary
+countries.popitem()
+print(countries) # this will print "{'USA': 'Washington DC', 'Canada': 'Ottawa', 'Mexico': 'Mexico City', 'Peru': 'Lima', 'Chile': 'Santiago'}"
+
+# remove a key-value pair from a dictionary using a key
+countries.pop("Mexico")
+print(countries) # this will print "{'USA': 'Washington DC', 'Canada': 'Ottawa', 'Peru': 'Lima', 'Chile': 'Santiago'}"
+
+# print a value if a key exists in a dictionary
+if "USA" in countries:
+    print(countries["USA"])
+    
+# print a value if a key exists in a dictionary using a try except statement
+try:
+    print(countries["USA"])
+except:
+    print("Key does not exist")
 
 # remove all key-value pairs from a dictionary
 countries.clear()
+print(countries) # this will print "{}"
 
 # count the number of key-value pairs in a dictionary
-print(len(countries))
+print(len(countries)) # this will print "0"
 
 # get all keys in a dictionary
-print(countries.keys())
+print(countries.keys()) # this will print "dict_keys([])"
 
 # get all values in a dictionary
-print(countries.values())
+print(countries.values()) # this will print "dict_values([])"
 
 # get all key-value pairs in a dictionary
-print(countries.items())
+print(countries.items()) # this will print "dict_items([])"
+
+# loop key and values in a dictionary
+for key, value in countries.items():
+    print(key, value)
 
 # copy a dictionary
 countries = {
@@ -342,6 +461,7 @@ countries = {
     "Chile": "Santiago"
 }
 countries_copy = countries.copy()
+print(countries_copy) # this will print "{'USA': 'Washington DC', 'Canada': 'Ottawa', 'Mexico': 'Mexico City', 'Brazil': 'Brasilia', 'Peru': 'Lima', 'Chile': 'Santiago'}"
 
 # merge two dictionaries
 countries = {
@@ -357,8 +477,11 @@ countries2 = {
     "Colombia": "Bogota"
 }
 countries.update(countries2)
-print(countries)
+print(countries) # this will print "{'USA': 'Washington DC', 'Canada': 'Ottawa', 'Mexico': 'Mexico City', 'Brazil': 'Brasilia', 'Peru': 'Lima', 'Chile': 'Santiago', 'Argentina': 'Buenos Aires', 'Colombia': 'Bogota'}"
 
+# Alternative way to declare a dictionary
+countries = dict(USA = "Washington DC", Canada = "Ottawa", Mexico = "Mexico City", Brazil = "Brasilia", Peru = "Lima", Chile = "Santiago")
+print(countries) # this will print "{'USA': 'Washington DC', 'Canada': 'Ottawa', 'Mexico': 'Mexico City', 'Brazil': 'Brasilia', 'Peru': 'Lima', 'Chile': 'Santiago'}"
 
 ##############################################
 ## Conditionals
@@ -405,6 +528,11 @@ if "Hello" == "Hello":
 # compare unequal strings
 if "Hello" != "World":
     print("Hello is not equal to World")
+    
+# check if a item exists in a list
+countries = ["USA", "Canada", "Mexico", "Brazil", "Peru", "Chile"]
+if "USA" in countries:
+    print("USA is in the list")
 
 
 ##############################################
